@@ -15,19 +15,19 @@ function str_split_unicode($str){
 function getRandomVowel(){
 	global $maxVow;
 	global $vowel;
-	$thatVowel = rand(0,$maxVow);
+	$thatVowel = mt_rand(0,$maxVow);
 	return $vowel[$thatVowel];
 }
 
 function getRandomConsonant(){
 	global $maxCons;
 	global $consonant;
-	$thisConsonant = rand(0,$maxCons);
+	$thisConsonant = mt_rand(0,$maxCons);
 	return $consonant[$thisConsonant];
 }
 
 function chanceOfSwitch($shoudBe,$percentChanceOfNoChange){
-	$chanceOfChange = rand(0,100);
+	$chanceOfChange = mt_rand(0,100);
 	if($shoudBe===1){
 		if($chanceOfChange<$percentChanceOfNoChange){
 			// consonne attendue ET fournie
@@ -89,12 +89,12 @@ function createAname($howlongS = 2,$howlongF = 10){
 }
 
 function getSizeName($mi,$ma){
-	$sizeName = rand($mi,$ma);
+	$sizeName = mt_rand($mi,$ma);
 	return $sizeName;
 }
 
 function getLetterStart(){
-	$startBy = rand(0,1);
+	$startBy = mt_rand(0,1);
 	return $startBy;
 }
 
